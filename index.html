@@ -16,19 +16,19 @@
 
 <main class="container">
   <section class="card">
-    <div class="section-title"><h2>Ürünler</h2><span id="productCount">0 ürün</span></div>
-    <div class="row"><input id="searchInput" type="search" placeholder="Ürün ara..."><button id="clearSearchBtn" class="ghost">Temizle</button></div>
+    <div class="section-title"><h2>Ürün Ara</h2><span id="productCount">0 ürün</span></div>
+    <div class="row"><input id="searchInput" type="search" placeholder="Siparişe eklemek için ürün adı yaz..."><button id="clearSearchBtn" class="ghost">Temizle</button></div>
     <div class="row wrap">
       <button id="importBtn">CSV / TXT İçe Aktar</button>
       <input id="fileInput" type="file" accept=".csv,.txt" hidden>
       <button id="addProductBtn" class="ghost">Manuel Ürün Ekle</button>
       <button id="exportProductsBtn" class="ghost">Ürünleri Yedekle</button>
     </div>
-    <div class="muted import-note">CSV’de <b>name</b> veya <b>ürün adı</b> sütunu varsa otomatik onu alır.</div>
+    <div class="muted import-note">CSV’de <b>name</b> veya <b>ürün adı</b> sütunu varsa otomatik onu alır. Arama yapınca en fazla 6 ürün gösterilir.</div>
     <div id="productList" class="product-list"></div>
   </section>
 
-  <section class="card sticky-order">
+  <section class="card">
     <div class="section-title"><h2>Aktif Sipariş</h2><span id="orderCount">0 kalem</span></div>
     <div id="orderList" class="order-list empty">Henüz ürün eklenmedi.</div>
     <div class="actions">
