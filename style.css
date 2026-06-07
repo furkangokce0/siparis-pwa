@@ -4,3 +4,7 @@
 .qty-input,.search-qty{width:70px!important;text-align:center!important;padding:9px!important;border-radius:12px!important;font-weight:800!important}
 .search-qty{height:38px!important}
 @media(max-width:760px){.qty-input,.search-qty{width:64px!important}}
+
+.history-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;min-width:190px}
+.history-actions button{text-align:center}
+@media(max-width:760px){.history-actions{grid-template-columns:1fr 1fr;margin-top:10px;min-width:0}.history-actions button{width:100%}}
