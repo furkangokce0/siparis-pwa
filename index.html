@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sipariş Listem</title>
+  <meta name="theme-color" content="#111827">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="app-header">
+  <div><h1>Sipariş Listem</h1><p>Ürün ara, adet ekle, WhatsApp’tan gönder.</p></div>
+  <button id="installBtn" class="ghost hidden">Yükle</button>
+</header>
+
+<main class="container">
+  <section class="card">
+    <div class="section-title"><h2>Ürünler</h2><span id="productCount">0 ürün</span></div>
+    <div class="row"><input id="searchInput" type="search" placeholder="Ürün ara..."><button id="clearSearchBtn" class="ghost">Temizle</button></div>
+    <div class="row wrap">
+      <button id="importBtn">CSV / TXT İçe Aktar</button>
+      <input id="fileInput" type="file" accept=".csv,.txt" hidden>
+      <button id="addProductBtn" class="ghost">Manuel Ürün Ekle</button>
+      <button id="exportProductsBtn" class="ghost">Ürünleri Yedekle</button>
+    </div>
+    <div id="productList" class="product-list"></div>
+  </section>
+
+  <section class="card sticky-order">
+    <div class="section-title"><h2>Aktif Sipariş</h2><span id="orderCount">0 kalem</span></div>
+    <div id="orderList" class="order-list empty">Henüz ürün eklenmedi.</div>
+    <div class="actions">
+      <button id="copyBtn">Listeyi Kopyala</button>
+      <button id="whatsappBtn">WhatsApp’a Gönder</button>
+      <button id="saveOrderBtn" class="ghost">Siparişi Kaydet</button>
+      <button id="clearOrderBtn" class="danger">Temizle</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="section-title"><h2>Önceki Siparişler</h2><button id="clearHistoryBtn" class="danger small">Geçmişi Sil</button></div>
+    <div id="historyList" class="history-list empty">Kayıtlı sipariş yok.</div>
+  </section>
+</main>
+
+<dialog id="productDialog">
+  <form method="dialog" class="dialog-box">
+    <h3>Ürün Ekle</h3>
+    <input id="manualProductName" placeholder="Ürün adı">
+    <div class="row end"><button value="cancel" class="ghost">Vazgeç</button><button id="confirmAddProduct" value="default">Ekle</button></div>
+  </form>
+</dialog>
+
+<div id="toast" class="toast hidden"></div>
+<script src="app.js"></script>
+</body>
+</html>
